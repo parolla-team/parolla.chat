@@ -22,9 +22,8 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           allowUpdates: true
-          updateOnlyUnreleased: true
-          artifacts: "dist/*"
-          draft: true
+          updateOnlyUnreleased: false
+          draft: false
           generateReleaseNotes: true
           tag: ${{ steps.package-version.outputs.current-version}}
 
