@@ -44,4 +44,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro --help` | Get help using the Astro CLI                       |
 
 ## Credit
-_A page template built with astro and tailwindcss using tailus blocks._
+_A page template built with astro and tailwindcss using tailus blocks ([theme](https://github.com/Tailus-UI/astro-theme))._
