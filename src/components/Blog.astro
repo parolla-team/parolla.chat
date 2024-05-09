@@ -1,0 +1,30 @@
+---
+import Container from "./Container.astro"
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getCollection } from "astro:content";
+import BlogPost from "./BlogPost.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const allPosts = await getCollection("blog");
+
+---
+
+<div id="blog">
+  <Container>
+    <div class="mb-12 space-y-2 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 md:text-4xl dark:text-white">{t("blog.title")}</h2>
+      <p class="lg:mx-auto lg:w-6/12 text-gray-600 dark:text-gray-300">
+        {t("blog.description")}
+      </p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {
+        allPosts.map((post) => (
+          <BlogPost url={`/blog/${post.slug}/`} title={post.data.title} description={post.data.description} />
+        ))
+      }
+    </div>
+  </Container>
+</div>

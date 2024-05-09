@@ -1,0 +1,49 @@
+name: deploy to production
+on: 
+    push:
+      branches:
+        - main
+jobs:
+  deploy:
+    name: Build, then SCP dist output
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Install Tools & Dependencies
+        uses: ./.github/actions/install
+
+      - name: Build Landing
+        run: pnpm run build
+
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+
+      - name: Upload to release
+        uses: ncipollo/release-action@v1
+        with:
+          allowUpdates: true
+          updateOnlyUnreleased: true
+          artifacts: "dist/*"
+          draft: true
+          generateReleaseNotes: true
+          tag: ${{ steps.package-version.outputs.current-version}}
+
+      - name: copy file via ssh key
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_PAROLLA_AGORA_HOSTNAME }}
+          username: ${{ secrets.SSH_PAROLLA_AGORA_USER }}
+          key: ${{ secrets.SSH_PAROLLA_AGORA_KEY }}
+          source: "dist/*"
+          target: "/home/ubuntu/landing-build"
+
+      - name: Manually move build to Matrix public folder
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_PAROLLA_AGORA_HOSTNAME }}
+          username: ${{ secrets.SSH_PAROLLA_AGORA_USER }}
+          key: ${{ secrets.SSH_PAROLLA_AGORA_KEY }}
+          script: "sudo cp  -r /home/ubuntu/landing-build/* /matrix/static-files/public/"
