@@ -14,19 +14,6 @@ jobs:
       - name: Build Landing
         run: pnpm run build
 
-      - name: get-npm-version
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
-
-      - name: Upload to release
-        uses: ncipollo/release-action@v1
-        with:
-          allowUpdates: true
-          updateOnlyUnreleased: false
-          draft: false
-          generateReleaseNotes: true
-          tag: ${{ steps.package-version.outputs.current-version}}
-
       - name: copy file via ssh key
         uses: appleboy/scp-action@v0.1.7
         with:
