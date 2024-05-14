@@ -29,6 +29,12 @@ Ce repo contient la landing page pour le Projet d'assistant IA pour la langue Co
 
 Nous avons un déploiment automatique quand la branch main reçois un push. 
 
+## 📒 Blog
+
+Ajouter un nouveau fichier MDX dans le dossier suivant et suivre la structure de l'article existant:
+- https://github.com/parolla-team/parolla.chat/tree/main/src/content/blog
+
+
 
 ## 🧞 Commandes
 
