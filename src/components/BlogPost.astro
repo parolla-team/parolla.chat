@@ -1,9 +1,10 @@
 ---
-const { title, description, url } = Astro.props
+const { title, description, url, image_url } = Astro.props
 
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
 ---
 <a href={url} class="hover:cursor-pointer">
 <div
@@ -11,7 +12,7 @@ const t = useTranslations(lang);
 >
     <div class="relative overflow-hidden rounded-xl">
         <img
-            src="https://images.unsplash.com/photo-1661749711934-492cd19a25c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"
+            src={image_url}
             alt="art cover"
             loading="lazy"
             width="1000"

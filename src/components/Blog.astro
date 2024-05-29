@@ -22,7 +22,7 @@ const allPosts = await getCollection("blog");
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {
         allPosts.map((post) => (
-          <BlogPost url={`/blog/${post.slug}/`} title={post.data.title} description={post.data.description} />
+          <BlogPost url={`/blog/${post.slug}/`} title={post.data.title} description={post.data.description} image_url={post.data.image.url} />
         ))
       }
     </div>
