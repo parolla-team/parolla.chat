@@ -1,5 +1,8 @@
 name: deploy to production
-on: [workflow_dispatch]
+on:     
+  push:
+    branches:
+      - main
 jobs:
   deploy:
     name: Build, then SCP dist output
