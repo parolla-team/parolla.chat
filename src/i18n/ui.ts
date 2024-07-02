@@ -46,7 +46,7 @@ export const ui = {
         'hero.title.span': 'maintenant',
         'hero.button.register': 'Commencer',
         'hero.button.moreinfo': 'En savoir plus',
-        'hero.description': 'Avec Parolla, plongez dans une agora virtuelle où vous échangez des messages en temps réel pour apprendre le Corse. Discutez librement dans nos salons publics ou optez pour des discussions privées, notre assistant vous accompagnera dans les 2 cas. Une expérience conviviale et flexible vous attend pour progresser à votre rythme !',
+        'hero.description': 'Avec Parolla, apprenez le Corse en temps réel dans une agora virtuelle dynamique, en rejoignant des salons publics animés ou des discussions privées personnalisées, avec le soutien de notre assistant IA Parolla',
         'hero.info.1.title': 'Sur-mesure',
         'hero.info.1.subtitle': 'Votre parcours simplifié',
         'hero.info.2.title': 'Une communauté engagée',
