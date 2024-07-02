@@ -22,7 +22,10 @@ const Image = (props) => {
                     <img {...props} className="w-screen h-screen object-contain"></img>
                 </div>
             ) : (
-                <img {...props} onClick={setFlag}></img>
+                <div className="shadow-lg rounded">
+                    <img {...props} className="p-8" onClick={setFlag}></img>
+                    {props.alt && <em className="text-center">{props.alt}</em>}
+                </div>
             )}
         </>
     )
