@@ -19,11 +19,11 @@ const Image = (props) => {
         <>
             {click ? (
                 <div onClick={unsetFlag} className="fixed z-[999] w-screen h-screen flex items-center items-center transition-opacity duration-[ease] delay-[0.4s] left-0 top-0 visible opacity-100 bg-black">
-                    <img {...props} className="w-screen h-screen object-contain"></img>
+                    <img {...props} className="w-screen h-screen object-contain" alt="image alt"></img>
                 </div>
             ) : (
                 <div className="shadow-lg rounded">
-                    <img {...props} className="p-8" onClick={setFlag}></img>
+                    <img {...props} className="p-8" onClick={setFlag} alt="image alt"></img>
                 </div>
             )}
         </>
