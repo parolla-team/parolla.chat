@@ -24,7 +24,6 @@ const Image = (props) => {
             ) : (
                 <div className="shadow-lg rounded">
                     <img {...props} className="p-8" onClick={setFlag}></img>
-                    {props.alt && <em className="text-center">{props.alt}</em>}
                 </div>
             )}
         </>
