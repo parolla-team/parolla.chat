@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import Container from "../components/Container.astro";
+import Layout from "../layouts/Layout.astro";
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Politique de confidentialité | Parolla.">
+    <main class="space-y-40 mb-40 px-7 pt-48 w-full">
+        <Container>
+            <div class="mx-auto max-w-screen-xl px-3 sm:px-5 lg:px-6 py-24">
+                <header class="text-center">
+                    <h1
+                        class="whitespace-pre-line text-5xl font-bold leading-hero text-gray-900"
+                    >
+                        {t("download.title")}
+                        <span class="text-primary">{t("download.name")}</span>
+                    </h1><div class="mt-4 mb-6 whitespace-pre-line text-2xl">
+                        {t("download.description")}
+                    </div>
+                    <a
+                        href="https://agora.parolla.chat/signup_user_complete/?id=ckryg3wttjgztnanafzj458nio&md=link&sbr=fa"
+                        class="relative flex h-11 w-full mx-auto items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
+                    >
+                        <span
+                            class="relative text-base font-semibold text-white"
+                            >{t("download.notyet")}</span
+                        >
+                    </a>
+                    <img
+                        class="mx-auto mt-12 rounded-md hidden lg:flex"
+                        src="/images/application-desktop.png"
+                        alt="Application screenshot"
+                    />
+                    <img
+                        class="mx-auto mt-12 rounded-md flex lg:hidden"
+                        src="/images/application-mobile.png"
+                        alt="Application screenshot"
+                    />
+                </header>
+            </div>
+        </Container>
+    </main>
+</Layout>

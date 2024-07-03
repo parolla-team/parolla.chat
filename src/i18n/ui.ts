@@ -37,6 +37,7 @@ export const ui = {
         'blog.title': 'I nostri articuli',
         'blog.readmore': 'Leggi di più',
         'blog.description': 'Scopri l\'ultimi articuli di Parolla.',
+        'download.title': 'Scarica Parolla',
     },
     fr: {
         'nav.register': "S'inscrire",
@@ -69,5 +70,9 @@ export const ui = {
         'blog.title': 'Nos articles',
         'blog.readmore': 'Lire la suite',
         'blog.description': 'Découvrez les derniers articles de Parolla.',
+        'download.title': 'Télécharger ',
+        'download.name': 'Parolla',
+        'download.description': 'L\'Application Parolla n\'est pas encore disponible au téléchargement. Nous travaillons pour vous supporter tous les appareilles.',
+        'download.notyet': 'Utiliser votre navigateur',
     },
 } as const; 
