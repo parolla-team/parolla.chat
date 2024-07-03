@@ -70,9 +70,9 @@ export const ui = {
         'blog.title': 'Nos articles',
         'blog.readmore': 'Lire la suite',
         'blog.description': 'Découvrez les derniers articles de Parolla.',
-        'download.title': 'Télécharger ',
+        'download.title': 'Télécharger l\'application',
         'download.name': 'Parolla',
-        'download.description': 'L\'Application Parolla n\'est pas encore disponible au téléchargement. Nous travaillons pour vous supporter tous les appareilles.',
+        'download.description': 'Malheureusement Parolla n\'est pas encore disponible en téléchargement. ',
         'download.notyet': 'Utiliser votre navigateur',
     },
 } as const; 
