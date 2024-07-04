@@ -8,7 +8,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const allPosts = await getCollection("blog");
-console.log(allPosts)
+
 ---
 
 <div id="blog">
@@ -22,7 +22,7 @@ console.log(allPosts)
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {
         allPosts.map((post) => (
-          <BlogPost url={`/blog/${post.slug}/`} title={post.data.title} description={post.data.description} image_url={post.data.image.url} image_alt={"post.data.image.alt"} />
+          <BlogPost url={`/blog/${post.slug}/`} title={post.data.title} description={post.data.description} image_url={post.data.image.url} image_alt={post.data.image.alt} />
         ))
       }
     </div>
