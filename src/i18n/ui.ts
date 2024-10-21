@@ -9,6 +9,7 @@ export const ui = {
     co: {
         'nav.register': "Arregistrà",
         'nav.blog': 'Bloggu',
+        'nav.traduction': 'Traduttori',
         'nav.about': 'Apprupositu',
         'hero.title': 'Amparate u corsu cù Parolla,',
         'hero.title.span': 'avà',
@@ -42,6 +43,7 @@ export const ui = {
     fr: {
         'nav.register': "S'inscrire",
         'nav.blog': 'Blog',
+        'nav.traduction': 'Traducteur',
         'nav.about': 'À propos',
         'hero.title': 'Apprenez le Corse avec Parolla, ',
         'hero.title.span': 'maintenant',
