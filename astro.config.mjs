@@ -7,7 +7,7 @@ import remarkEleventyImage from "astro-remark-eleventy-image";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), mdx(), react(), remarkEleventyImage()],
+  integrations: [tailwind({applyBaseStyles: false}), mdx(), react(), remarkEleventyImage()],
   i18n: {
     defaultLocale: "fr",
     locales: ["co", "fr"],

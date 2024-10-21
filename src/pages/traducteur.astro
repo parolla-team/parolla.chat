@@ -1,0 +1,20 @@
+---
+import Container from "../components/Container.astro";
+import Layout from "../layouts/Layout.astro";
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { TranslationToolComponent } from "@/components/translation-tool";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title="Politique de confidentialité | Parolla.">
+    <main class="space-y-40 mb-24 px-7 pt-24 w-full">
+        <Container>
+            <div class="mx-auto max-w-screen-xl px-3 sm:px-5 lg:px-6 py-24">
+                <TranslationToolComponent client:only="react"/>
+            </div>
+        </Container>
+    </main>
+</Layout>
