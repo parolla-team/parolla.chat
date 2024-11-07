@@ -39,7 +39,7 @@ export function TranslationToolComponent() {
       }
   };
   
-  fetch('https://dn9dm8kvscr6p9kf.eu-west-1.aws.endpoints.huggingface.cloud', {
+  fetch('https://d52sqo2qaq5dove0.eu-west-1.aws.endpoints.huggingface.cloud', {
       method: 'POST',
       headers: headers,
       body: JSON.stringify(payload)
@@ -60,7 +60,13 @@ export function TranslationToolComponent() {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-8">
+      <div
+        className="mx-auto mb-16 flex items-center justify-center  text-sm font-semibold text-primary dark:text-white relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
+      >
+        <span class="mr-3">🚧</span>
+        <span class="hidden md:flex">Version Beta&nbsp;</span>
+      </div>
       <h1 className="text-2xl font-bold text-center mb-6">Traducteur Corse-Français</h1>
       
       <div className="flex items-center space-x-4 bg-white">
@@ -116,8 +122,7 @@ export function TranslationToolComponent() {
           />
         </div>
       </div>
-
-
+      <span class="text-muted text-center mx-auto flex justify-center text-sm">Le traducteur IA peut faire des erreurs, veuillez verifier les traductions.</span>
     </div>
   )
 }
