@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/Container.astro";
+import AnnotationApp from "../components/AnnotationApp.jsx";
+---
+
+<Layout title="Contribuer à l'annotation | Parolla">
+  <main class="min-h-screen bg-gray-50 px-4 py-24 dark:bg-gray-900">
+    <Container>
+      <div class="mx-auto max-w-3xl text-center">
+        <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
+          Contribuez à l'annotation
+        </h1>
+        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          Aidez-nous à améliorer les paires français–corse. Dites si la traduction est correcte et ajoutez un commentaire si besoin.
+        </p>
+        <div class="mt-12" data-no-overlay>
+          <AnnotationApp client:load />
+        </div>
+      </div>
+    </Container>
+  </main>
+</Layout>

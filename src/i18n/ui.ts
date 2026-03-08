@@ -10,6 +10,7 @@ export const ui = {
         'nav.register': "Arregistrà",
         'nav.blog': 'Bloggu',
         'nav.traduction': 'Traduttori',
+        'nav.annotate': 'Annotà',
         'nav.about': 'Apprupositu',
         'hero.title': 'Amparate u corsu cù Parolla,',
         'hero.title.span': 'avà',
@@ -43,6 +44,7 @@ export const ui = {
     fr: {
         'nav.register': "S'inscrire",
         'nav.blog': 'Blog',
+        'nav.annotate': 'Annoter',
         'nav.traduction': 'Traducteur',
         'nav.about': 'À propos',
         'hero.title': 'Apprenez le Corse avec Parolla, ',

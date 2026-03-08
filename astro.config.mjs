@@ -6,6 +6,7 @@ import remarkUnwrapImages from 'remark-unwrap-images'
 import remarkEleventyImage from "astro-remark-eleventy-image";
 
 // https://astro.build/config
+// Note: Annotation API runs via server/index.js (standalone Express)
 export default defineConfig({
   integrations: [tailwind({applyBaseStyles: false}), mdx(), react(), remarkEleventyImage()],
   i18n: {

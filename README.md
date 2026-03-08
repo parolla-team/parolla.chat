@@ -27,7 +27,24 @@ Ce repo contient la landing page pour le Projet d'assistant IA pour la langue Co
 
 ## 🚀 Déploiment
 
-Nous avons un déploiment automatique quand la branch main reçois un push. 
+Nous avons un déploiment automatique quand la branch main reçoit un push.
+
+### Annotation communautaire
+
+Pour activer la page d'annotation (`/annotate`) avec persistance SQLite :
+
+```bash
+pnpm run serve   # build + lance le serveur Node
+# ou
+pnpm run build && node server/index.js
+```
+
+Le serveur sert le site statique + les routes `/api/pairs`, `/api/annotate`.
+
+Variables d'environnement :
+- `PORT` : port (défaut 4321)
+- `ANNOTATIONS_DB` : chemin SQLite (défaut `./data/annotations.db`)
+- `ANNOTATIONS_ADMIN_KEY` : clé pour bloquer des utilisateurs et exporter les annotations 
 
 ## 📒 Blog
 

@@ -18,3 +18,7 @@ runs:
     - name: Install dependencies
       run: pnpm install
       shell: bash
+
+    - name: Build native modules
+      run: pnpm rebuild sharp better-sqlite3
+      shell: bash
